@@ -1,0 +1,63 @@
+#!/bin/sh
+#----SIR-HENRY'S-CONFIGURATION-FILES----#
+
+#---AUTOSTART---#
+#I did this :D
+xsetroot -cursor_name left_ptr
+picom -c &
+musicpd &
+sxhkd &
+~/.fehbg &
+notify-send "BSPWM Loaded" "Wallpaper Changed!" &
+~/.config/polybar/launch.sh &
+xrdb -load ~/.Xresources &
+
+#-----MONITORS-----#
+#6 desktops are enough
+
+bspc monitor -d I II III IV V VI 
+
+#-----CONFIGURATION------#
+#configurations are beautiful
+
+bspc config border_radius     8
+bspc config border_width      4
+bspc config window_gap        50
+
+bspc config single_monocle    false
+bspc config focus_follows_pointer   true
+bspc config pointer_follows_focus   false
+bpsc config pointer_follows_monitor  true
+bspc config center_pseudo_tiled       true
+
+bspc config split_ratio       0.50
+bspc config borderless_monocle    true
+bspc config gapless_monocle       true
+
+bspc config automatic_scheme    spiral
+bspc config initial_polarity    first_child
+bspc config directional_focus_tightness   high
+
+bspc config top_padding     80
+bspc config bottom_padding   30
+bspc config left_padding      70
+bspc config right_padding     60
+
+bspc config ignore_ewmh_focus   true
+bspc config pointer_modifier     mod1
+
+#---BORDERS---#
+
+bspc config normal_border_color   "#282c34"
+bspc config focused_border_color  "#bbc2cf"
+bspc config active_border_color   "#ff6v6b"
+bspc config presel_border_color   "#ecbe7b"
+bspc config urgent_border_color   "#51afef"
+
+#---RULES---#
+bspc rule -a mpv state=fullscreen
+bspc rule Gimp desktop='/\8'state=floating follow=on
+bspc rule -a Chromium desktop='/\2'
+#bspc rule -a mplater2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
