@@ -1,9 +1,10 @@
 #!/bin/sh
- ____  ____
-/ ___||  _ \  BSPWM CONFIGURATION FILE 
-\___ \| | | | email:roriaxber@gmail.com
- ___) | |_| | website/blog: https://razoriwebsite.neocities.org
-|____/|____/  "You can do anything as long as you think outside the box and learn the boring stuff" -SD(sirdamian)
+
+# ____  ____
+#/ ___||  _ \  BSPWM CONFIGURATION FILE 
+#\___ \| | | | email:roriaxber@gmail.com
+# ___) | |_| | website/blog: https://razoriwebsite.neocities.org
+#|____/|____/  "You can do anything as long as you think outside the box and learn the boring stuff" -SD(sirdamian)
 
 #AUTOSTART
 #I did this :D
